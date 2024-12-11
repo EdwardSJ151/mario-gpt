@@ -12,14 +12,14 @@ from mario_gpt.dataset import MarioDataset
 from mario_gpt.utils import view_level
 
 STATISTICS = {
-    "enemy": np.array([1.0, 7.0, 15.0]),
+    "enemy": np.array([1.0, 4.0, 9.0]),
     "pipe": np.array([0.0, 3.0, 7.0]),
     "block": np.array([50.0, 75.0, 176.0]),
 
     "coin": np.array([1.0, 20.0, 50.0]),
     "powerup": np.array([1.0, 4.0, 9.0]),
-    "goomba": np.array([1.0, 5.0, 12.0]),
-    "koopa": np.array([1.0, 5.0, 12.0]),
+    "goomba": np.array([1.0, 3.0, 7.0]),
+    "koopa": np.array([1.0, 3.0, 7.0]),
 }
 
 FEATURE_EXTRACTION_MODEL = "facebook/bart-base"
@@ -275,6 +275,6 @@ class Prompter:
             "powerup":powerup_prompt,
             "elevation_prompt": elevation_prompt,
         }
-        prompt = f"{pipe_prompt}, {enemy_prompt}, {block_prompt}, {elevation_prompt}"
+        prompt = f"{pipe_prompt}, {enemy_prompt}, {block_prompt}, {goomba_prompt}, {koopa_prompt}, {coin_prompt}, {powerup_prompt}, {elevation_prompt}"
         hidden = self.output_hidden(prompt, device=device)
         return prompt, hidden, prompt_dict, str_level
