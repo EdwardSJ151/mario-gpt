@@ -12,14 +12,14 @@ from mario_gpt.dataset import MarioDataset
 from mario_gpt.utils import view_level
 
 STATISTICS = {
-    "enemy": np.array([1.0, 5.0, 9.0]),
-    "pipe": np.array([0.0, 2.0, 5.0]),
+    "enemy": np.array([1.0, 7.0, 14.0]),
+    "pipe": np.array([0.0, 3.0, 7.0]),
     "block": np.array([50.0, 75.0, 176.0]),
 
     "coin": np.array([1.0, 20.0, 50.0]),
-    "powerup": np.array([1.0, 3.0, 7.0]),
-    "goomba": np.array([1.0, 3.0, 7.0]),
-    "koopa": np.array([1.0, 3.0, 7.0]),
+    "powerup": np.array([1.0, 4.0, 9.0]),
+    "goomba": np.array([1.0, 5.0, 9.0]),
+    "koopa": np.array([1.0, 5.0, 9.0]),
 }
 
 FEATURE_EXTRACTION_MODEL = "facebook/bart-base"
@@ -97,7 +97,7 @@ class Prompter:
         return np.sum([flattened_level.count(char) for char in ["E", "B", "k", "K", "g", "G", "r", "R", "y"]])
 
     def count_blocks(self, flattened_level: str) -> int:
-        return np.sum([flattened_level.count(char) for char in ["X", "S", "?", "Q"]])
+        return np.sum([flattened_level.count(char) for char in ["X", "S", "?", "Q", "#"]])
 
     def count_koopas(self, flattened_level: str) -> int:
         return np.sum([flattened_level.count(char) for char in ["r", "R", "k", "K"]])

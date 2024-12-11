@@ -79,6 +79,7 @@ def convert_level_to_png(
     chars2pngs = {
         "-": Image.open(f"{tiles_dir}/smb-background.png"),
         "X": Image.open(f"{tiles_dir}/smb-unpassable.png"),
+        "#": Image.open(f"{tiles_dir}/smb-unpassable.png"),
         "S": Image.open(f"{tiles_dir}/smb-breakable.png"),
         "?": Image.open(f"{tiles_dir}/smb-question.png"),
         "Q": Image.open(f"{tiles_dir}/smb-question.png"),
@@ -169,6 +170,7 @@ NEW_TOKENS = [
     "o", # Coin
 
     "X", # Ground
+    "#", # Hard Block
     "S", # Brick
     'C', # Coin Brick Block
     'U', # Mushroom Brick Block
