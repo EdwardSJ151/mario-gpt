@@ -97,7 +97,7 @@ class Prompter:
         return np.sum([flattened_level.count(char) for char in ["E", "B", "k", "K", "g", "G", "r", "R", "y"]])
 
     def count_blocks(self, flattened_level: str) -> int:
-        return np.sum([flattened_level.count(char) for char in ["X", "S", "?", "Q", "#"]])
+        return np.sum([flattened_level.count(char) for char in ["X", "S", "?", "Q", "!", "1", "2", "C", "U"]])
 
     def count_koopas(self, flattened_level: str) -> int:
         return np.sum([flattened_level.count(char) for char in ["r", "R", "k", "K"]])

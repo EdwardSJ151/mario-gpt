@@ -78,17 +78,17 @@ def convert_level_to_png(
         tiles_dir = TILE_DIR
     chars2pngs = {
         "-": Image.open(f"{tiles_dir}/smb-background.png"),
-        "X": Image.open(f"{tiles_dir}/smb-unpassable.png"),
+        "X": Image.open(f"{tiles_dir}/ground.png"),
         "#": Image.open(f"{tiles_dir}/smb-unpassable.png"),
         "S": Image.open(f"{tiles_dir}/smb-breakable.png"),
-        "?": Image.open(f"{tiles_dir}/smb-question.png"),
-        "Q": Image.open(f"{tiles_dir}/smb-question.png"),
-        "o": Image.open(f"{tiles_dir}/smb-coin.png"),
-        "E": Image.open(f"{tiles_dir}/smb-enemy.png"),
+        "?": Image.open(f"{tiles_dir}/special_question_block.png"),
+        "Q": Image.open(f"{tiles_dir}/special_question_block.png"),
+        "o": Image.open(f"{tiles_dir}/coin.png"),
+        "E": Image.open(f"{tiles_dir}/blue_goomba.png"),
         "<": Image.open(f"{tiles_dir}/smb-tube-top-left.png"),
         ">": Image.open(f"{tiles_dir}/smb-tube-top-right.png"),
-        "(": Image.open(f"{tiles_dir}/smb-tube-top-left.png"),
-        ")": Image.open(f"{tiles_dir}/smb-tube-top-right.png"),
+        "(": Image.open(f"{tiles_dir}/white_pipe_top_left.png"),
+        ")": Image.open(f"{tiles_dir}/white_pipe_top_right.png"),
         "[": Image.open(f"{tiles_dir}/smb-tube-lower-left.png"),
         "]": Image.open(f"{tiles_dir}/smb-tube-lower-right.png"),
         "x": Image.open(f"{tiles_dir}/smb-path.png"),  # self-created
@@ -98,22 +98,22 @@ def convert_level_to_png(
         "N": Image.open(f"{tiles_dir}/N.png"),  # self-created
         "B": Image.open(f"{tiles_dir}/cannon_top.png"),
         "b": Image.open(f"{tiles_dir}/cannon_bottom.png"),
-        "F": Image.open(f"{tiles_dir}/flying_koopa.png"),
+        "F": Image.open(f"{tiles_dir}/icon_interrogation.png"),
 
-        "C": Image.open(f"{tiles_dir}/icon_interrogation.png"), # Coin Brick Block
-        "U": Image.open(f"{tiles_dir}/icon_interrogation.png"), # Mushroom Brick Block
-        "!": Image.open(f"{tiles_dir}/icon_interrogation.png"), # Question Block (changed from Q)
-        "1": Image.open(f"{tiles_dir}/icon_interrogation.png"), # Invisible 1 up block
-        "2": Image.open(f"{tiles_dir}/icon_interrogation.png"), # Invisible coin block
-        "g": Image.open(f"{tiles_dir}/smb-enemy.png"),
-        "G": Image.open(f"{tiles_dir}/icon_interrogation.png"),
-        "k": Image.open(f"{tiles_dir}/icon_interrogation.png"),
-        "K": Image.open(f"{tiles_dir}/icon_interrogation.png"),
-        "r": Image.open(f"{tiles_dir}/icon_interrogation.png"),
-        "R": Image.open(f"{tiles_dir}/icon_interrogation.png"),
-        "y": Image.open(f"{tiles_dir}/icon_interrogation.png"),
-        "t": Image.open(f"{tiles_dir}/smb-tube-lower-right.png"),
-        "T": Image.open(f"{tiles_dir}/smb-tube-top-right.png"),
+        "C": Image.open(f"{tiles_dir}/yellow_brick.png"), # Coin Brick Block
+        "U": Image.open(f"{tiles_dir}/red_brick.png"), # Mushroom Brick Block
+        "!": Image.open(f"{tiles_dir}/smb-question.png"), # Question Block (changed from Q)
+        "1": Image.open(f"{tiles_dir}/life.png"), # Invisible 1 up block
+        "2": Image.open(f"{tiles_dir}/coin2.png"), # Invisible coin block
+        "g": Image.open(f"{tiles_dir}/goomba.png"),
+        "G": Image.open(f"{tiles_dir}/white_goomba.png"),
+        "k": Image.open(f"{tiles_dir}/koopa.png"),
+        "K": Image.open(f"{tiles_dir}/winged_koopa.png"),
+        "r": Image.open(f"{tiles_dir}/red_koopa.png"),
+        "R": Image.open(f"{tiles_dir}/winged_red_koopa.png"),
+        "y": Image.open(f"{tiles_dir}/spiny.png"),
+        "t": Image.open(f"{tiles_dir}/icon_interrogation.png"),
+        "T": Image.open(f"{tiles_dir}/icon_interrogation.png"),
     }
     levels = [list(s) for s in level]
     arr = np.array(levels)
