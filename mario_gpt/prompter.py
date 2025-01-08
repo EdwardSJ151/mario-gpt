@@ -94,10 +94,10 @@ class Prompter:
         return flattened_level.count("<>") + flattened_level.count("()")
 
     def count_enemies(self, flattened_level: str) -> int:
-        return np.sum([flattened_level.count(char) for char in ["E", "B", "k", "K", "g", "G", "r", "R", "y"]])
+        return np.sum([flattened_level.count(char) for char in ["E", "B", "y"]])
 
     def count_blocks(self, flattened_level: str) -> int:
-        return np.sum([flattened_level.count(char) for char in ["X", "S", "?", "Q", "!", "1", "2", "C", "U"]])
+        return np.sum([flattened_level.count(char) for char in ["X", "S", "Q", "!", "2", "C", "#"]])
 
     def count_koopas(self, flattened_level: str) -> int:
         return np.sum([flattened_level.count(char) for char in ["r", "R", "k", "K"]])
