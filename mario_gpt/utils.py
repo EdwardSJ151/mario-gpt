@@ -77,10 +77,10 @@ def convert_level_to_png(
     if tiles_dir is None:
         tiles_dir = TILE_DIR
     chars2pngs = {
-        "-": Image.open(f"{tiles_dir}/smb-background.png"),
+        "-": Image.open(f"{tiles_dir}/sky2.png"),
         "X": Image.open(f"{tiles_dir}/ground.png"),
         "#": Image.open(f"{tiles_dir}/smb-unpassable.png"),
-        "S": Image.open(f"{tiles_dir}/smb-breakable.png"),
+        "S": Image.open(f"{tiles_dir}/brick2.png"),
         "?": Image.open(f"{tiles_dir}/special_question_block.png"),
         "Q": Image.open(f"{tiles_dir}/special_question_block.png"),
         "o": Image.open(f"{tiles_dir}/coin.png"),
