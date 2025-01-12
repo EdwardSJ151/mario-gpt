@@ -174,6 +174,7 @@ NEW_TOKENS = [
     "S", # Brick
     'C', # Coin Brick Block
     'U', # Mushroom Brick Block
+    'L', # 1 UP Block
     "?", # Special Question Block 
     "!", # Question Block (changed from Q)
     '1', # Invisible 1 up block

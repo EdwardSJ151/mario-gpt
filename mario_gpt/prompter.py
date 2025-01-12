@@ -106,7 +106,7 @@ class Prompter:
         return flattened_level.count("g") + flattened_level.count("G")
 
     def count_powerups(self, flattened_level: str) -> int:
-        return np.sum([flattened_level.count(char) for char in ["1", "?", "U"]])
+        return np.sum([flattened_level.count(char) for char in ["1", "?", "U", "L"]])
 
     def count_coins(self, flattened_level: str) -> int:
         return flattened_level.count("o")
