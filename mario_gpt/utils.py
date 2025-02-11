@@ -37,6 +37,9 @@ def view_level(level_tokens, tokenizer, flatten=False):
             str_list[i] = str_list[i] + "Y" * diff
     return join_list_of_list(np.array(characterize(str_list)).T)
 
+def view_level_flat(level_tokens, tokenizer):
+    str_list = tokenizer.decode(level_tokens.detach().cpu()).replace("<mask>", "Y")
+    return str_list
 
 def is_flying_enemy(array, row, col):
     num_rows = array.shape[0]
@@ -188,8 +191,8 @@ NEW_TOKENS = [
     'R', # Winged Red Koopa
     'y', # Spiky
 
-    "B", # Bullet Billington head
-    "b", # Bullet Billington body
+    "B", # Bullet Bill head
+    "b", # Bullet Bill body
     "<", # Top left pipe
     ">", # Top right pipe
     "(", # Top left pipe with plant
